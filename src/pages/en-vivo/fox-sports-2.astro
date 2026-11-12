@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="FOX Sports 2 México en vivo por internet | Fútbol Libre TV"
+  description="Ver FOX Sports 2 México en vivo por internet. Más fútbol, deportes de motor y eventos en directo en calidad HD."
+  keywords="FOX Sports 2 en vivo, FOX Sports 2 por internet, FOX Sports 2 México, ver FOX Sports 2 online"
+  canonicalPath="/en-vivo/fox-sports-2"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"FOX Sports 2","url":"/en-vivo/fox-sports-2","description":"Ver FOX Sports 2 México en vivo por internet. Más fútbol, deportes de motor y eventos en directo en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="FOX Sports 2 México en vivo por internet"
+    streamKey="foxsports2mx"
+    logoImage="/images/fox-sports-2.74e14.webp"
+    logoAlt="Logo de FOX Sports 2"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">FOX Sports 2 ofrece una programación con deportes de motor, fútbol y otros contenidos deportivos para complementar FOX Sports 1.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de FOX Sports 2</h2>
+    <p class="mb-3 text-gray-600">La programación de FOX Sports 2 abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Automovilismo:</strong> Fórmula 1, NASCAR y deportes de motor.</li>
+      <li class="mb-1"><strong>Fútbol:</strong> Liga MX y fútbol internacional.</li>
+      <li class="mb-1"><strong>Tenis:</strong> Torneos internacionales de tenis.</li>
+      <li class="mb-1"><strong>Otros deportes:</strong> Golf, pesca y deportes extremos.</li>
+    </ul>
+    <p class="text-gray-600">Míralo en vivo y en directo por internet en calidad HD.</p>
+  </section>
+</BaseLayout>

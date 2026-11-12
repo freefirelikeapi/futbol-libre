@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CommunityLinks from '../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="Fútbol Libre - Fútbol en Vivo Gratis y Champions y Más en Vivo"
+  description="Transmisiones de fútbol en directo y sin costo en Fútbol Libre TV. Liga MX, LaLiga, Copa Libertadores y canales deportivos según programación. ¡Entra ya!"
+  keywords="fútbol libre tv, futbol libre tv, fútbol en vivo gratis, ver fútbol online, fútbol libre en vivo, pelota libre tv, partidos de fútbol en directo, transmisión de fútbol gratis, Liga MX en vivo, LaLiga en vivo, Copa Libertadores en vivo, Champions League en vivo, canales deportivos en vivo, tv en vivo fútbol, ver partidos gratis por internet, fútbol mexicano en vivo, liga mx femenil en vivo, copa sudamericana en vivo, premier league en vivo gratis, fútbol latinoamericano en vivo, fútbol español en vivo, canal de deportes online, ver fútbol sin registrarse, fútbol hd gratis, agenda de partidos en vivo, fútbol argentina en vivo, deportes en vivo gratis"
+  canonicalPath="/"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"WebSite","name":"Fútbol Libre TV","url":"/","description":"Portal de transmisiones deportivas en vivo con fútbol, canales de TV y agenda de partidos para seguidores de México y América Latina.","inLanguage":"es"})} />
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Fútbol Libre TV","url":"/","logo":"/img/futbollibre.png","sameAs":[]})} />
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":"Canales deportivos en vivo","itemListElement":[{"@type":"ListItem","position":1,"name":"ESPN 1 en vivo","url":"/en-vivo/espn-1"},{"@type":"ListItem","position":2,"name":"ESPN 2 en vivo","url":"/en-vivo/espn-2"},{"@type":"ListItem","position":3,"name":"ESPN 3 en vivo","url":"/en-vivo/espn-3"},{"@type":"ListItem","position":4,"name":"FOX Sports 1 en vivo","url":"/en-vivo/fox-sports-1"},{"@type":"ListItem","position":5,"name":"FOX Sports 2 en vivo","url":"/en-vivo/fox-sports-2"},{"@type":"ListItem","position":6,"name":"FOX Sports 3 en vivo","url":"/en-vivo/fox-sports-3"},{"@type":"ListItem","position":7,"name":"FOX Sports Premium en vivo","url":"/en-vivo/fox-sports-premium"},{"@type":"ListItem","position":8,"name":"TUDN en vivo","url":"/en-vivo/tudn-mx"}]})} />
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Fútbol Libre TV cobra alguna tarifa por ver los partidos?","acceptedAnswer":{"@type":"Answer","text":"No, el servicio es totalmente gratuito. Accedes a todas las transmisiones y canales deportivos sin suscripción, sin cuotas ocultas y sin necesidad de ingresar datos de pago."}},{"@type":"Question","name":"¿Necesito registrarme o instalar una app para usar el sitio?","acceptedAnswer":{"@type":"Answer","text":"Para nada. Solo abre tu navegador favorito, entra a la página, selecciona el encuentro o la señal que prefieras y la reproducción arranca al instante sin pasos adicionales."}},{"@type":"Question","name":"¿Las transmisiones están disponibles en alta definición?","acceptedAnswer":{"@type":"Answer","text":"La mayoría de las señales se emiten en HD. La nitidez final puede variar según el proveedor que esté activo en ese momento y la estabilidad de tu conexión a internet."}},{"@type":"Question","name":"¿En qué aparatos puedo ver las transmisiones en vivo?","acceptedAnswer":{"@type":"Answer","text":"Puedes usar cualquier teléfono Android o iPhone, computadora de escritorio o portátil, tablet e incluso Smart TVs que tengan navegador propio. No hace falta descargar software extra."}},{"@type":"Question","name":"¿Qué puedo hacer si el video se detiene o no arranca?","acceptedAnswer":{"@type":"Answer","text":"Pulsa el botón Recargar para reiniciar la señal. Si el problema continúa, elige otro reproductor de la lista disponible en esa misma página o actualiza el sitio por completo."}},{"@type":"Question","name":"¿Qué campeonatos y ligas puedo seguir en esta plataforma?","acceptedAnswer":{"@type":"Answer","text":"Encontrarás Liga MX, LaLiga, Copa Libertadores, Champions League y muchos más torneos, dependiendo de la programación y las señales disponibles en cada jornada. El catálogo se renueva cada temporada."}}]})} />
+    <style>{`
+      .home-intro h1{text-align:center;color:#065f46;margin-top:.75rem;margin-bottom:1.25rem;font-size:2.25rem;font-weight:700;line-height:2.5rem}
+      .home-intro p{text-align:left;color:#4b5563;margin-bottom:1.5rem;font-size:1.125rem;line-height:1.75rem}
+      .home-intro a{color:#15803d;text-decoration:underline}
+      .home-intro a:hover{color:#166534}
+      .article-content h2{color:#065f46;margin-top:2rem;margin-bottom:.75rem;font-size:1.5rem;font-weight:600;line-height:2rem}
+      .article-content h2:first-child{margin-top:0}
+      .article-content p{color:#4b5563;margin-bottom:1rem;line-height:1.625}
+      .article-content strong{color:#1f2937;font-weight:700}
+      .article-content a{color:#15803d;text-decoration:underline}
+      .article-content a:hover{color:#166534}
+      .article-content ul{color:#374151;margin-bottom:1rem;padding-left:1.5rem;list-style-type:disc}
+      .article-content li{margin-bottom:.25rem}
+    `}</style>
+  </Fragment>
+
+  <!-- Heading + description -->
+  <div class="home-intro">
+    <h1 id="fútbol-libre-tv-en-vivo-gratis">Fútbol Libre TV en Vivo Gratis</h1>
+    <p>En <strong>Fútbol Libre TV</strong> accedes a <a href="/deportes">transmisiones de fútbol en directo</a> que cubren Liga MX, Champions League, Copa Libertadores y decenas de torneos más, sin gastar un centavo. La mayoría de las señales llegan en alta definición y se reproducen al instante: no hace falta crear cuenta ni descargar nada.</p>
+  </div>
+
+  <!-- Agenda — live schedule from agenda18.com API -->
+  <section id="agenda" class="mb-5">
+    <div class="rounded-t-lg bg-gradient-to-r from-green-700 to-green-800 p-2 text-center text-white shadow-md">
+      <h2 class="text-base font-bold">&#128197; Agenda de Partidos</h2>
+    </div>
+
+    <!-- Android APK CTA -->
+    <div id="android-app-cta" class="hidden mt-3">
+      <a id="android-app-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 rounded-xl bg-[#3DDC84] px-6 py-4 text-base font-bold text-gray-900 shadow-md transition-transform duration-200 hover:scale-[1.03] sm:text-lg">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M17.523 15.341a.998.998 0 1 1 0-1.996.998.998 0 0 1 0 1.996m-11.046 0a.998.998 0 1 1 0-1.996.998.998 0 0 1 0 1.996m11.405-6.02 1.994-3.453a.416.416 0 0 0-.152-.567.416.416 0 0 0-.568.152l-2.018 3.496A12.212 12.212 0 0 0 12 7.877c-1.86 0-3.618.359-5.138 1.072L4.844 5.453a.416.416 0 0 0-.568-.152.416.416 0 0 0-.152.567L6.118 9.32C2.693 11.184.352 14.653 0 18.75h24c-.352-4.097-2.693-7.566-6.118-9.429"></path></svg>
+        Descargar APK
+      </a>
+    </div>
+    <script is:inline>
+      (function(){if(/android/i.test(navigator.userAgent)){var e="US.MX.AR.CO.ES.PE.VE.CL.EC.GT.CU.BO.DO.HN.PY.SV.NI.CR.PA.UY.PR.GQ.BR.HT.BZ.GY.SR.GF".split("."),t=[97,72,82,48,99,72,77,54,76,121,57,119,98,71,70,53,76,109,82,118,98,50,100,115,90,83,53,106,98,50,48,118,99,51,82,118,99,109,85,118,89,88,66,119,99,121,57,107,90,88,82,104,97,87,120,122,80,50,108,107,80,50,78,118,98,83,53,122,99,71,57,121,100,72,77,117,98,71,108,50,90,88,82,50,76,110,78,48,99,109,86,104,98,83,49,110,100,87,108,107,90,83,53,122,100,71,70,117,90,71,108,117,90,51,77,61];fetch("https://pro.ip-api.com/json?fields=22282239&key=XOpiansRgYxGTho").then(function(e){return e.json()}).then(function(n){if(n.status==="success"&&e.indexOf(n.countryCode)!==-1){var r=t.map(function(e){return String.fromCharCode(e)}).join(""),i=document.getElementById("android-app-link");i&&(i.href=atob(r)),document.getElementById("android-app-cta")?.classList.remove("hidden")}}).catch(function(){})}}
+      )();
+    </script>
+
+    <section aria-label="Agenda de partidos">
+      <!-- search + category filter -->
+      <div class="mb-4 mt-3 flex items-center gap-2.5">
+        <label for="ag-search" class="sr-only">Buscar partido</label>
+        <input id="ag-search" placeholder="Buscar por evento…" class="flex-1 rounded-md border border-gray-300 p-2.5">
+        <label for="ag-filter" class="sr-only">Filtrar por categoría</label>
+        <select id="ag-filter" class="flex-1 rounded-md border border-gray-300 bg-white p-2.5">
+          <option value="todos">Todas las categorías</option>
+        </select>
+      </div>
+      <!-- agenda list (populated client-side) -->
+      <ul id="ag-list" class="min-h-[360px] rounded-b-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
+        <li class="p-4 text-center text-gray-500">Cargando agenda…</li>
+      </ul>
+    </section>
+
+    <!-- player modal -->
+    <div id="ag-modal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/80 p-4">
+      <div class="w-full max-w-3xl rounded-xl bg-gray-900 p-2">
+        <div class="mb-2 flex items-center justify-between px-1 text-white">
+          <span id="ag-modal-title" class="font-bold"></span>
+          <button id="ag-modal-close" class="rounded bg-gray-700 px-2 py-1 text-sm">&#10005; Cerrar</button>
+        </div>
+        <iframe id="ag-modal-frame" class="aspect-video w-full rounded bg-black" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+        <div class="mt-2 text-center">
+          <button id="ag-modal-reload" class="rounded-full bg-green-700 px-5 py-2 font-bold text-white transition-colors hover:bg-green-800">&#8635; Recargar</button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline type="module" src="/scripts/agenda.js"></script>
+  </section>
+
+  <!-- Join our community -->
+  <CommunityLinks />
+
+  <!-- Channels -->
+  <section id="canales">
+    <h2 class="mt-6 mb-4 text-center text-2xl font-semibold text-emerald-800">Canales Deportivos México</h2>
+    <div>
+      <!-- search / filter bar -->
+      <div class="mb-4 mt-3 flex items-center gap-2.5">
+        <label for="ch-search" class="sr-only">Buscar canal</label>
+        <input id="ch-search" value="" placeholder="Buscar canal…" class="flex-1 rounded-md border border-gray-300 p-2.5">
+        <label for="ch-filter" class="sr-only">Filtrar por categoría</label>
+        <select id="ch-filter" class="flex-1 rounded-md border border-gray-300 bg-white p-2.5">
+          <option value="Todos">Todos</option>
+          <option value="Fútbol">Fútbol</option>
+          <option value="Deportes">Deportes</option>
+        </select>
+      </div>
+      <div id="ch-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <a data-name="espn 1" data-category="Deportes" href="/en-vivo/espn-1" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/espn-1.74e14.webp" alt="Logo de ESPN 1" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">ESPN 1</h3><p class="mb-4 text-gray-600">Deportes en vivo</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="espn 2" data-category="Deportes" href="/en-vivo/espn-2" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/espn-2.74e14.webp" alt="Logo de ESPN 2" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">ESPN 2</h3><p class="mb-4 text-gray-600">Deportes en vivo</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="espn 3" data-category="Deportes" href="/en-vivo/espn-3" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/espn-3.74e14.webp" alt="Logo de ESPN 3" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">ESPN 3</h3><p class="mb-4 text-gray-600">Deportes en vivo</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="fox sports 1" data-category="Fútbol" href="/en-vivo/fox-sports-1" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/fox-sports-1.74e14.webp" alt="Logo de FOX Sports 1" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">FOX Sports 1</h3><p class="mb-4 text-gray-600">Fútbol y deportes</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="fox sports 2" data-category="Fútbol" href="/en-vivo/fox-sports-2" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/fox-sports-2.74e14.webp" alt="Logo de FOX Sports 2" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">FOX Sports 2</h3><p class="mb-4 text-gray-600">Fútbol y deportes</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="fox sports 3" data-category="Fútbol" href="/en-vivo/fox-sports-3" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/fox-sports-3.74e14.webp" alt="Logo de FOX Sports 3" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">FOX Sports 3</h3><p class="mb-4 text-gray-600">Fútbol y deportes</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="fox sports premium" data-category="Fútbol" href="/en-vivo/fox-sports-premium" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/fox-sports-premium.74e14.webp" alt="Logo de FOX Sports Premium" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">FOX Sports Premium</h3><p class="mb-4 text-gray-600">Fútbol premium</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+        <a data-name="tudn" data-category="Fútbol" href="/en-vivo/tudn-mx" class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+          <div class="flex h-48 items-center justify-center bg-gray-100"><div class="flex h-40 w-40 items-center justify-center rounded-2xl bg-white shadow-sm"><img src="/images/tudn-mx.74e14.webp" alt="Logo de TUDN" width="256" height="256" loading="lazy" class="h-32 w-32 object-contain"></div></div>
+          <div class="p-6 text-center"><h3 class="mb-1 text-xl font-bold text-gray-800">TUDN</h3><p class="mb-4 text-gray-600">Liga MX en vivo</p><span class="inline-block rounded-full bg-green-700 px-4 py-2 font-bold text-white">Ver Canal</span></div>
+        </a>
+      </div>
+    </div>
+    <script is:inline>
+      var e=document.getElementById("ch-grid"),t=document.getElementById("ch-search"),n=document.getElementById("ch-filter"),r=Array.from(e?.querySelectorAll("a")??[]),i=function(){var e=(t?.value??"").toLowerCase().trim(),i=n?.value??"Todos";for(var s=0;s<r.length;s++){var a=r[s],c=i==="Todos"||a.dataset.category===i,l=(a.dataset.name??"").includes(e);a.classList.toggle("hidden",!(c&&l))}};t?.addEventListener("input",i);n?.addEventListener("change",i);
+    </script>
+  </section>
+
+  <!-- SEO content -->
+  <article class="article-content mt-10">
+    <h2 id="qué-es-fútbol-libre-tv">¿Qué es Fútbol Libre TV?</h2>
+    <p><strong>Fútbol Libre TV</strong> es tu punto de encuentro para disfrutar de <a href="/deportes">transmisiones de fútbol en directo</a> junto con <a href="/">señales deportivas</a> sin necesidad de crear cuentas ni pagar cuotas mensuales. El funcionamiento es directo: consultas la cartelera del día, eliges el encuentro que te interesa y el reproductor arranca en segundos desde cualquier navegador.</p>
+    <p>El catálogo cubre torneos de México, el resto de América Latina y las principales ligas europeas. Todo el contenido de <strong>fútbol en vivo gratis</strong> está centralizado en una sola página, con la mayor parte de las señales transmitidas en alta definición —la calidad exacta varía según el proveedor de turno y la velocidad de tu red.</p>
+    <h2 id="cómo-encontrar-el-partido-que-buscas">Encuentra tu partido en segundos</h2>
+    <p>Directo a la <a href="/">cartelera de partidos</a>: los encuentros aparecen listados por horario local. Haz clic en cualquiera para desplegar los reproductores activos y selecciona el que mejor responda según tu conexión a internet.</p>
+    <p>No hace falta instalar software adicional: <strong>Fútbol Libre TV</strong> corre íntegramente dentro del navegador. Funciona en <strong>smartphones, tablets y computadoras de escritorio</strong>, e incluso en televisores inteligentes que cuenten con navegador incorporado.</p>
+    <h2 id="competiciones-disponibles-según-programación">Torneos y ligas que puedes seguir</h2>
+    <p>Cada jornada trae una selección distinta de partidos, sujeta a las señales activas en ese momento. Entre las competiciones que aparecen con mayor frecuencia se encuentran:</p>
+    <ul>
+      <li><strong>Liga MX</strong> y Liga MX Femenil — el máximo circuito del fútbol mexicano</li>
+      <li><a href="/deportes">Copa Libertadores y Copa Sudamericana</a> — las copas continentales organizadas por la Conmebol</li>
+      <li>UEFA Champions League y UEFA Europa League — la élite del fútbol de clubes en Europa</li>
+      <li><a href="/deportes">LaLiga, Premier League y Serie A</a> — los campeonatos domésticos con mayor audiencia global</li>
+      <li><a href="/deportes">Liga Profesional Argentina, Liga BetPlay y más torneos de Sudamérica</a></li>
+      <li>Eliminatorias Conmebol y Concacaf de cara al próximo Mundial</li>
+    </ul>
+    <p>La programación cambia con cada fecha; consulta la <a href="/">cartelera de partidos</a> para ver qué juegos están disponibles en este momento.</p>
+  </article>
+
+  <!-- How to watch -->
+  <section class="mt-8">
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">¿Cómo ver los partidos en vivo?</h2>
+    <ol class="mb-4 list-decimal pl-6 text-gray-700">
+      <li class="mb-1">Abre la sección <strong>Agenda de Partidos</strong> al inicio de la página.</li>
+      <li class="mb-1">Busca el partido de tu equipo o filtra por deporte y categoría.</li>
+      <li class="mb-1">Toca el partido, elige un canal o reproductor y dale play. ¡Listo para disfrutar en HD!</li>
+    </ol>
+    <p class="text-gray-600">Si un reproductor falla, usa el botón <strong>Recargar</strong> o prueba con otro canal del mismo partido.</p>
+  </section>
+
+  <!-- Channel links -->
+  <section class="mt-8">
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Canales deportivos en vivo</h2>
+    <p class="mb-4 text-gray-600">Además de los partidos de la agenda, puedes sintonizar canales deportivos de México las 24 horas:</p>
+    <ul class="mb-4 grid list-none grid-cols-1 gap-2 sm:grid-cols-2">
+      <li><a href="/en-vivo/espn-1" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> ESPN 1 en vivo</a></li>
+      <li><a href="/en-vivo/espn-2" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> ESPN 2 en vivo</a></li>
+      <li><a href="/en-vivo/espn-3" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> ESPN 3 en vivo</a></li>
+      <li><a href="/en-vivo/fox-sports-1" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> FOX Sports 1 en vivo</a></li>
+      <li><a href="/en-vivo/fox-sports-2" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> FOX Sports 2 en vivo</a></li>
+      <li><a href="/en-vivo/fox-sports-3" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> FOX Sports 3 en vivo</a></li>
+      <li><a href="/en-vivo/fox-sports-premium" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> FOX Sports Premium en vivo</a></li>
+      <li><a href="/en-vivo/tudn-mx" class="text-gray-700 transition-colors hover:text-green-700"><span class="text-green-700">&#9654;</span> TUDN en vivo</a></li>
+    </ul>
+    <p class="text-gray-600">Elige tu canal favorito para ver fútbol, deportes y programas de análisis en directo, sin anuncios molestos.</p>
+  </section>
+
+  <!-- Leagues -->
+  <section class="mt-8">
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Ligas de fútbol en español en vivo</h2>
+    <p class="mb-4 text-gray-600">Sigue el <strong>fútbol en español</strong> de todos los países hispanohablantes: de México a Argentina, pasando por España, Colombia, Chile, Perú, Ecuador y el resto de Latinoamérica. Estas son las principales ligas que puedes ver en vivo por internet:</p>
+    <ul class="mb-4 grid list-none grid-cols-1 gap-2 sm:grid-cols-2">
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga MX</a><span class="block text-sm text-gray-600">&#127474;&#127485; México</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga MX Femenil</a><span class="block text-sm text-gray-600">&#127474;&#127485; México</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">LaLiga</a><span class="block text-sm text-gray-600">&#127466;&#127480; España</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga Profesional</a><span class="block text-sm text-gray-600">&#127462;&#127479; Argentina</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga BetPlay</a><span class="block text-sm text-gray-600">&#127464;&#127476; Colombia</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Primera División de Chile</a><span class="block text-sm text-gray-600">&#127464;&#127473; Chile</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga 1</a><span class="block text-sm text-gray-600">&#127477;&#127466; Perú</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">LigaPro Serie A</a><span class="block text-sm text-gray-600">&#127466;&#127464; Ecuador</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Primera División de Uruguay</a><span class="block text-sm text-gray-600">&#127482;&#127486; Uruguay</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Primera División de Paraguay</a><span class="block text-sm text-gray-600">&#127477;&#127486; Paraguay</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">División Profesional</a><span class="block text-sm text-gray-600">&#127463;&#127476; Bolivia</span></li>
+      <li class="rounded-lg border border-gray-200 bg-white p-3"><a href="/deportes" class="font-semibold text-green-700 transition-colors hover:text-green-800 hover:underline">Liga FUTVE</a><span class="block text-sm text-gray-600">&#127483;&#127466; Venezuela</span></li>
+    </ul>
+    <p class="text-gray-600">Todas las transmisiones son <strong>gratis</strong>, en calidad HD y sin anuncios molestos.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mt-8">
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Preguntas frecuentes</h2>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿Fútbol Libre TV cobra alguna tarifa por ver los partidos?</summary>
+      <p class="mt-2 text-gray-600">No, el servicio es totalmente gratuito. Accedes a todas las transmisiones y canales deportivos sin suscripción, sin cuotas ocultas y sin necesidad de ingresar datos de pago.</p>
+    </details>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿Necesito registrarme o instalar una app para usar el sitio?</summary>
+      <p class="mt-2 text-gray-600">Para nada. Solo abre tu navegador favorito, entra a la página, selecciona el encuentro o la señal que prefieras y la reproducción arranca al instante sin pasos adicionales.</p>
+    </details>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿Las transmisiones están disponibles en alta definición?</summary>
+      <p class="mt-2 text-gray-600">La mayoría de las señales se emiten en HD. La nitidez final puede variar según el proveedor que esté activo en ese momento y la estabilidad de tu conexión a internet.</p>
+    </details>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿En qué aparatos puedo ver las transmisiones en vivo?</summary>
+      <p class="mt-2 text-gray-600">Puedes usar cualquier teléfono Android o iPhone, computadora de escritorio o portátil, tablet e incluso Smart TVs que tengan navegador propio. No hace falta descargar software extra.</p>
+    </details>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿Qué puedo hacer si el video se detiene o no arranca?</summary>
+      <p class="mt-2 text-gray-600">Pulsa el botón Recargar para reiniciar la señal. Si el problema continúa, elige otro reproductor de la lista disponible en esa misma página o actualiza el sitio por completo.</p>
+    </details>
+    <details class="mb-3 rounded-lg border border-gray-200 bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+      <summary class="cursor-pointer select-none font-semibold text-gray-800">¿Qué campeonatos y ligas puedo seguir en esta plataforma?</summary>
+      <p class="mt-2 text-gray-600">Encontrarás Liga MX, LaLiga, Copa Libertadores, Champions League y muchos más torneos, dependiendo de la programación y las señales disponibles en cada jornada. El catálogo se renueva cada temporada.</p>
+    </details>
+  </section>
+</BaseLayout>

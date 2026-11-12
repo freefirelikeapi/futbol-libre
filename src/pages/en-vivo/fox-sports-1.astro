@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="FOX Sports 1 México en vivo por internet | Fútbol Libre TV"
+  description="Ver FOX Sports 1 México en vivo por internet. Liga MX, fútbol europeo, boxeo y deportes en directo en calidad HD."
+  keywords="FOX Sports 1 en vivo, FOX Sports 1 por internet, FOX Sports 1 México, ver FOX Sports 1 online"
+  canonicalPath="/en-vivo/fox-sports-1"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"FOX Sports 1","url":"/en-vivo/fox-sports-1","description":"Ver FOX Sports 1 México en vivo por internet. Liga MX, fútbol europeo, boxeo y deportes en directo en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="FOX Sports 1 México en vivo por internet"
+    streamKey="foxsportsmx"
+    logoImage="/images/fox-sports-1.74e14.webp"
+    logoAlt="Logo de FOX Sports 1"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">FOX Sports 1 es uno de los canales deportivos más vistos en México, con cobertura de la Liga MX, las principales ligas europeas, boxeo y UFC.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de FOX Sports 1</h2>
+    <p class="mb-3 text-gray-600">La programación de FOX Sports 1 abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Fútbol:</strong> Liga MX, Bundesliga y fútbol internacional.</li>
+      <li class="mb-1"><strong>Boxeo y UFC:</strong> Las mejores veladas de boxeo y artes marciales mixtas.</li>
+      <li class="mb-1"><strong>NFL:</strong> Transmisiones y análisis de la temporada NFL.</li>
+      <li class="mb-1"><strong>Béisbol:</strong> MLB y la Serie del Caribe.</li>
+    </ul>
+    <p class="text-gray-600">En vivo y en directo por internet, con calidad HD y sin anuncios molestos.</p>
+  </section>
+</BaseLayout>

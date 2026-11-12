@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="ESPN 3 México en vivo por internet | Fútbol Libre TV"
+  description="Ver ESPN 3 México en vivo por internet. Fútbol mexicano, basquetbol y eventos deportivos en directo en calidad HD."
+  keywords="ESPN 3 en vivo, ESPN 3 por internet, ESPN 3 México, ver ESPN 3 online"
+  canonicalPath="/en-vivo/espn-3"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"ESPN 3","url":"/en-vivo/espn-3","description":"Ver ESPN 3 México en vivo por internet. Fútbol mexicano, basquetbol y eventos deportivos en directo en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="ESPN 3 México en vivo por internet"
+    streamKey="espn3mx"
+    logoImage="/images/espn-3.74e14.webp"
+    logoAlt="Logo de ESPN 3"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">ESPN 3 México amplía la cobertura deportiva con fútbol, básquetbol y otros deportes en vivo, complementando la oferta de ESPN y ESPN 2.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de ESPN 3</h2>
+    <p class="mb-3 text-gray-600">La programación de ESPN 3 abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Fútbol:</strong> Liga MX, Liga de Expansión y fútbol internacional.</li>
+      <li class="mb-1"><strong>Básquetbol:</strong> NBA y basquetbol FIBA.</li>
+      <li class="mb-1"><strong>Deportes universitarios:</strong> Eventos deportivos universitarios de EE. UU.</li>
+      <li class="mb-1"><strong>Otros deportes:</strong> Tenis, golf y deportes de combate.</li>
+    </ul>
+    <p class="text-gray-600">Míralo en vivo y en directo por internet, sin cortes y en HD.</p>
+  </section>
+</BaseLayout>

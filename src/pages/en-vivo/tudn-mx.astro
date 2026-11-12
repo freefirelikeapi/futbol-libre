@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="TUDN México en vivo por internet | Fútbol Libre TV"
+  description="Ver TUDN México en vivo por internet. Liga MX, Selección Mexicana, Concacaf y Liga MX Femenil en calidad HD."
+  keywords="TUDN en vivo, TUDN por internet, TUDN México, ver TUDN online"
+  canonicalPath="/en-vivo/tudn-mx"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"TUDN","url":"/en-vivo/tudn-mx","description":"Ver TUDN México en vivo por internet. Liga MX, Selección Mexicana, Concacaf y Liga MX Femenil en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="TUDN México en vivo por internet"
+    streamKey="tudn_mx"
+    logoImage="/images/tudn-mx.74e14.webp"
+    logoAlt="Logo de TUDN"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">TUDN es el canal de Univision dedicado al deporte en México, con la transmisión de la Liga MX, los partidos de la Selección Mexicana y la Concacaf.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de TUDN</h2>
+    <p class="mb-3 text-gray-600">La programación de TUDN abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Liga MX:</strong> Todos los partidos de la Liga MX en vivo.</li>
+      <li class="mb-1"><strong>Selección Mexicana:</strong> Partidos amistosos y eliminatorias.</li>
+      <li class="mb-1"><strong>Concacaf:</strong> Liga de Campeones de la Concacaf.</li>
+      <li class="mb-1"><strong>Liga MX Femenil:</strong> Cobertura completa del fútbol femenil.</li>
+    </ul>
+    <p class="text-gray-600">Míralo en vivo y en directo por internet, en calidad HD y sin anuncios molestos.</p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="ESPN 2 México en vivo por internet | Fútbol Libre TV"
+  description="Ver ESPN 2 México en vivo por internet. Más deporte en directo: Liga MX, NFL, boxeo y programas de análisis en calidad HD."
+  keywords="ESPN 2 en vivo, ESPN 2 por internet, ESPN 2 México, ver ESPN 2 online"
+  canonicalPath="/en-vivo/espn-2"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"ESPN 2","url":"/en-vivo/espn-2","description":"Ver ESPN 2 México en vivo por internet. Más deporte en directo: Liga MX, NFL, boxeo y programas de análisis en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="ESPN 2 México en vivo por internet"
+    streamKey="espn2mx"
+    logoImage="/images/espn-2.74e14.webp"
+    logoAlt="Logo de ESPN 2"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">ESPN 2 México ofrece una programación complementaria a ESPN, con más deportes en vivo, eventos internacionales y contenidos exclusivos para los aficionados mexicanos.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de ESPN 2</h2>
+    <p class="mb-3 text-gray-600">La programación de ESPN 2 abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Fútbol:</strong> Liga MX, copas internacionales y fútbol europeo.</li>
+      <li class="mb-1"><strong>NFL:</strong> Seguimiento de la temporada de la NFL.</li>
+      <li class="mb-1"><strong>Boxeo:</strong> Veladas de boxeo nacional e internacional.</li>
+      <li class="mb-1"><strong>Tenis y golf:</strong> Torneos del circuito ATP y golf de élite.</li>
+    </ul>
+    <p class="text-gray-600">Disponible en vivo y en directo por internet, en calidad HD.</p>
+  </section>
+</BaseLayout>

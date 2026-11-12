@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="FOX Sports Premium México en vivo por internet | Fútbol Libre TV"
+  description="Ver FOX Sports Premium México en vivo por internet. Liga MX, liguilla y eventos especiales en calidad HD."
+  keywords="FOX Sports Premium en vivo, FOX Sports Premium por internet, FOX Sports Premium México, ver FOX Sports Premium online"
+  canonicalPath="/en-vivo/fox-sports-premium"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"FOX Sports Premium","url":"/en-vivo/fox-sports-premium","description":"Ver FOX Sports Premium México en vivo por internet. Liga MX, liguilla y eventos especiales en calidad HD.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="FOX Sports Premium México en vivo por internet"
+    streamKey="foxsportspremium"
+    logoImage="/images/fox-sports-premium.74e14.webp"
+    logoAlt="Logo de FOX Sports Premium"
+  />
+
+  <CommunityLinks />
+
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">FOX Sports Premium es el canal de pago por evento de FOX Sports, con la mejor cobertura de la Liga MX, liguillas y eventos especiales.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de FOX Sports Premium</h2>
+    <p class="mb-3 text-gray-600">La programación de FOX Sports Premium abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Liga MX:</strong> Temporada regular, liguilla y finales.</li>
+      <li class="mb-1"><strong>Eventos especiales:</strong> Partidos exclusivos y estelares.</li>
+      <li class="mb-1"><strong>Fútbol internacional:</strong> Amistosos y copas internacionales.</li>
+    </ul>
+    <p class="text-gray-600">En vivo y en directo por internet, con calidad HD premium.</p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CommunityLinks from '../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="Deportes en vivo | Fútbol Libre TV"
+  description="Ver deportes en vivo por internet: fútbol, Liga MX, baloncesto NBA, béisbol MLB, NFL, tenis y más en calidad HD en Fútbol Libre TV."
+  keywords="deportes en vivo, fútbol en vivo, baloncesto, béisbol, NFL, tenis, deportes por internet"
+  canonicalPath="/deportes"
+>
+  <h1 class="mt-3 mb-5 text-center text-4xl font-bold text-emerald-800">Deportes en Vivo</h1>
+  <p class="mb-6 text-lg text-gray-600">Elige un deporte para ver los mejores canales en vivo por internet, en calidad HD y sin anuncios molestos.</p>
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+    <a href="/en-vivo/tudn-mx" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#9917;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">Fútbol</h2>
+      <p class="text-gray-600">Liga MX, Copa Libertadores, Champions League, LaLiga, Premier League y más.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+    <a href="/en-vivo/espn-1" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#127936;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">Baloncesto</h2>
+      <p class="text-gray-600">NBA con análisis y entrevistas exclusivas.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+    <a href="/en-vivo/fox-sports-1" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#9918;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">Béisbol</h2>
+      <p class="text-gray-600">MLB y la Serie del Caribe.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+    <a href="/en-vivo/espn-2" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#127944;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">NFL</h2>
+      <p class="text-gray-600">Toda la temporada de la NFL.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+    <a href="/en-vivo/fox-sports-3" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#129354;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">Boxeo y UFC</h2>
+      <p class="text-gray-600">Las mejores veladas de boxeo y artes marciales mixtas.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+    <a href="/en-vivo/espn-3" class="rounded-2xl bg-white p-6 shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-105">
+      <div class="mb-2 text-4xl">&#127934;</div>
+      <h2 class="mb-1 text-xl font-bold text-gray-800">Tenis</h2>
+      <p class="text-gray-600">Torneos internacionales de tenis.</p>
+      <span class="mt-3 inline-block rounded-full bg-green-700 px-4 py-1.5 text-sm font-bold text-white">Ver en vivo</span>
+    </a>
+  </div>
+  <CommunityLinks />
+</BaseLayout>

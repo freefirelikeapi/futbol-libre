@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChannelPlayer from '../../components/ChannelPlayer.astro';
+import CommunityLinks from '../../components/CommunityLinks.astro';
+---
+<BaseLayout
+  title="ESPN 1 México en vivo por internet | Fútbol Libre TV"
+  description="Ver ESPN 1 México en vivo por internet. Fútbol, Liga MX, UEFA Champions League, NBA, MLB y NFL en calidad HD y sin anuncios molestos."
+  keywords="ESPN 1 en vivo, ESPN 1 por internet, ESPN 1 México, ver ESPN 1 online"
+  canonicalPath="/en-vivo/espn-1"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"TVChannel","name":"ESPN 1","url":"/en-vivo/espn-1","description":"Ver ESPN 1 México en vivo por internet. Fútbol, Liga MX, UEFA Champions League, NBA, MLB y NFL en calidad HD y sin anuncios molestos.","inLanguage":"es","broadcaster":{"@type":"Organization","name":"futbol libre","url":"/"}})} />
+  </Fragment>
+
+  <ChannelPlayer
+    channelName="ESPN 1 México en vivo por internet"
+    streamKey="espnmx"
+    logoImage="/images/espn-1.74e14.webp"
+    logoAlt="Logo de ESPN 1"
+  />
+
+  <CommunityLinks />
+
+  <!-- SEO content -->
+  <section class="mt-8 mb-6">
+    <p class="mb-4 text-gray-600">ESPN (México) es uno de los principales canales de televisión deportiva del país. Forma parte de la cadena ESPN, una de las más importantes a nivel mundial, ofreciendo una cobertura completa de eventos deportivos, análisis y programas de debate.</p>
+    <h2 class="mb-3 text-2xl font-semibold text-emerald-800">Programación de ESPN 1</h2>
+    <p class="mb-3 text-gray-600">La programación de ESPN 1 abarca una amplia gama de disciplinas deportivas. Entre sus contenidos destacan:</p>
+    <ul class="mb-4 list-disc pl-6 text-gray-700">
+      <li class="mb-1"><strong>Fútbol:</strong> Transmisiones de la Liga MX, UEFA Champions League y LaLiga.</li>
+      <li class="mb-1"><strong>Baloncesto:</strong> Cobertura de la NBA con análisis y entrevistas exclusivas.</li>
+      <li class="mb-1"><strong>Béisbol:</strong> Juegos de la MLB y la Serie del Caribe.</li>
+      <li class="mb-1"><strong>NFL y otros deportes:</strong> Seguimiento detallado de la NFL, tenis, golf y automovilismo.</li>
+    </ul>
+    <p class="text-gray-600">ESPN no solo transmite eventos deportivos, sino que también ofrece contenido digital a través de ESPN Play, disponible en cualquier dispositivo.</p>
+  </section>
+</BaseLayout>

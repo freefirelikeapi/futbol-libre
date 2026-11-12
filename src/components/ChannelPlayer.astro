@@ -1,0 +1,27 @@
+---
+interface Props {
+  channelName: string;
+  streamKey: string;
+  logoImage: string;
+  logoAlt: string;
+}
+
+const { channelName, streamKey, logoImage, logoAlt } = Astro.props;
+const streamUrl = `https://la18hd.su/vivo/canal.php?stream=${streamKey}`;
+---
+<!-- Player -->
+<section>
+  <div class="mt-3 mb-4 flex items-center justify-center gap-3">
+    <img src={logoImage} alt={logoAlt} width="256" height="256" class="h-14 w-14 object-contain">
+    <h1 class="text-center text-3xl font-bold text-emerald-800">{channelName}</h1>
+  </div>
+  <div class="overflow-hidden rounded-xl bg-black shadow-lg">
+    <iframe id="embedIframe" src={streamUrl} title={`${channelName.split(' México')[0]} en vivo`} class="aspect-video w-full" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+  </div>
+  <div class="mt-3 text-center">
+    <button id="btnIframe" class="rounded-full bg-green-700 px-5 py-2 font-bold text-white transition-colors hover:bg-green-800">&#8635; Recargar canal</button>
+  </div>
+  <script is:inline>
+    var e=document.getElementById('embedIframe');document.getElementById('btnIframe')?.addEventListener('click',function(){e&&(e.src=e.src)});
+  </script>
+</section>
